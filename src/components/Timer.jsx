@@ -1,4 +1,3 @@
-// src/components/Timer.jsx
 import { useEffect, useRef, useState } from 'react';
 
 export default function Timer() {
@@ -24,7 +23,7 @@ export default function Timer() {
     setTime(0);
   };
 
-  
+
   useEffect(() => () => idRef.current && clearInterval(idRef.current), []);
 
   return (
