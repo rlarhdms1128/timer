@@ -2,9 +2,9 @@
 import { useEffect, useRef, useState } from 'react';
 
 export default function Timer() {
-  const [time, setTime] = useState(0);      // 경과 초
+  const [time, setTime] = useState(0);      
   const [running, setRunning] = useState(false);
-  const idRef = useRef(null);               // setInterval ID
+  const idRef = useRef(null);               
 
   const start = () => {
     if (running) return;
@@ -24,7 +24,7 @@ export default function Timer() {
     setTime(0);
   };
 
-  // 언마운트 시 인터벌 정리
+  
   useEffect(() => () => idRef.current && clearInterval(idRef.current), []);
 
   return (
